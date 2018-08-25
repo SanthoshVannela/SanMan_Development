@@ -16,11 +16,14 @@
   - cmd: 7z a SanMan_Development_Deploy.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development_Deploy\*
   after_build:
   - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip
+  environment:
+   site_to_deploy: http://www-dev.sanman.com/
   deploy:
   - provider: Environment
     name: SanMan_Development_Environment
     server: 67.51.178.59
     website: SanMan_Development
+    site_name : http://www-dev.sanman.com/
     username: CONPAK-TESTWEB1\Administrator
     password:
       secure: SSmx4kANL0vwt/0p5t1wTn9y7rPedcZpDibrVcLm0B8=
