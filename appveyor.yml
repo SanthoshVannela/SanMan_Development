@@ -4,7 +4,7 @@
     only:
       - master
   configuration:
-    - Master
+    - master
   before_build:
   - cmd: nuget restore
   build:
