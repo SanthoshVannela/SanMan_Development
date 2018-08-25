@@ -1,3 +1,4 @@
+
 -
   version: 1.0.{build}
   branches:
@@ -11,6 +12,12 @@
     project: SanMan_Development.sln
     publish_wap: true
     verbosity: minimal
+  before build:
+    - nuget restore SanMan_Development.sln
+  before_package:
+  - cmd: 7z a SanMan_Development_a.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development_a\*
+  after_build:
+  - cmd: appveyor PushArtifact SanMan_Development_a.zip
   test: off
   deploy:
   - provider: Environment
