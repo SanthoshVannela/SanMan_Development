@@ -17,7 +17,7 @@
   after_build:
   - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip
   environment:
-   site_to_deploy: http://www-dev.sanman.com/
+   site_to_deploy: http://10.1.2.110/
   deploy:
   - provider: Environment
     name: SanMan_Development_Environment
