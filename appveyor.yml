@@ -18,6 +18,7 @@
   - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip
   deploy:
   - provider: Environment
+    name: SanMan_Development_Environment
     server: 67.51.178.59
     website: SanMan_Development
     username: CONPAK-TESTWEB1\Administrator
@@ -27,6 +28,7 @@
     ntlm: true
     app_offline: true
   - provider: Environment
+    name: SanMan_Development_Environment
     server: 67.51.178.59
     website: SanMan_Development
     username: CONPAK-TESTWEB1\Administrator
