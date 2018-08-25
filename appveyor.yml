@@ -15,7 +15,7 @@
   before_package:
   - cmd: 7z a SanMan_Development_Deploy.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development_Deploy\*
   after_build:
-  - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip
+  - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip -DeploymentName SanMan_Development_Deploy
   environment:
    site_to_deploy: http://10.1.2.110/
   deploy:
