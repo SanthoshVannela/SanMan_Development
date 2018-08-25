@@ -18,7 +18,7 @@
   - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip -DeploymentName SanMan_Development_Deploy
   deploy:
   - provider: Environment
-    name: SanMan_Development
+    name: SanMan_Development_Environment
     server: 67.51.178.59
     protocol : http
     site_name: SanMan_Development
