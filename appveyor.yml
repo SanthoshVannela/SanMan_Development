@@ -5,6 +5,17 @@
     - master
   configuration:
     - Debug
+  build:
+    project: SanMan_Development.sln
+    publish_wap: true
+    parallel: true
+    verbosity: minimal
+  before_build:
+  - nuget restore SanMan_Development.sln
+  before_package:
+  - cmd: 7z a SanMan_Development_Deploy.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development_Deploy\*
+  after_build:
+  - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip
   deploy:
   - provider: Environment
     server: 67.51.178.59
@@ -12,6 +23,7 @@
     username: CONPAK-TESTWEB1\Administrator
     password:
       secure: SSmx4kANL0vwt/0p5t1wTn9y7rPedcZpDibrVcLm0B8=
+    artifact: SanMan_Development_Deploy.zip
     ntlm: true
     app_offline: true
   - provider: Environment
@@ -25,4 +37,3 @@
     on:
       branch: master
       APPVEYOR_REPO_BRANCH: master
--    
