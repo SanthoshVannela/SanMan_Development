@@ -4,15 +4,14 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
   <Target Name="Rebuild">
-    <Message Text="Rebuild selected" Importance="high"/> 
+    <Message Text="Rebuild selected" Importance="high" /> 
   </Target>
   <Target Name="Clean">
-    <Message Text="Clean selected" Importance="high"/>
+    <Message Text="Clean selected" Importance="high" />
    </Target>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="SanMan_Development_Deploy\" />
   </ItemGroup>
