@@ -22,6 +22,7 @@
   - provider: Environment
     name: SanMan_Development_Environment
     server: 67.51.178.59
+    protocol : http
     site_name: $(site_to_deploy)
     username: CONPAK-TESTWEB1\Administrator
     password:
@@ -32,6 +33,7 @@
   - provider: Environment
     name: SanMan_Development_Environment
     server: 67.51.178.59
+    protocol : http
     site_name: $(site_to_deploy)
     username: CONPAK-TESTWEB1\Administrator
     password:
