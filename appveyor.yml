@@ -1,0 +1,29 @@
+-
+  version: 1.0.{build}
+  branches:
+    only:
+      - master
+  configuration:
+    - Master
+  platform: Any CPU
+  before_build:
+  - cmd: nuget restore
+  build:
+    project: SanMan_Development.sln
+    publish_wap: true
+    verbosity: minimal
+  test: off
+  deploy:
+  - provider: Environment
+    server: 67.51.178.59
+    website: SanMan_Development
+    username: CONPAK-TESTWEB1\Administrator
+    password:
+      secure: SSmx4kANL0vwt/0p5t1wTn9y7rPedcZpDibrVcLm0B8=
+    ntlm: true
+    app_offline: true
+    on:
+      branch: master
+      APPVEYOR_REPO_BRANCH: master
+
+ 
