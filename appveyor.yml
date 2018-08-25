@@ -37,4 +37,3 @@
     on:
       branch: master
       APPVEYOR_REPO_BRANCH: master
- 
