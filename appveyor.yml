@@ -26,7 +26,7 @@
     password:
       secure: SSmx4kANL0vwt/0p5t1wTn9y7rPedcZpDibrVcLm0B8=
     artifact: SanMan_Development_Deploy.zip
-    SanMan_Development.deploy_website: true
+    SanMan_Development_Deploy.deploy_website: true
     ntlm: true
     app_offline: true
     on:
