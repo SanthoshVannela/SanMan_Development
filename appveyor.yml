@@ -21,7 +21,7 @@
     name: SanMan_Development_Deploy
     type: zip
   deploy:
-  - provider: SanMan_Development_Environment
+  - provider: Environment
     name: SanMan_Development_Environment
     server: 67.51.178.59
     protocol : http
