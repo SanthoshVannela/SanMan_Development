@@ -17,7 +17,9 @@
   after_build:
   - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip -DeploymentName SanMan_Development_Deploy
   artifacts:
+  - path: SanMan_Development_Deploy.zip
     name: SanMan_Development_Deploy
+    type: zip
   deploy:
   - provider: Environment
     name: SanMan_Development_Environment
