@@ -16,8 +16,7 @@
   - cmd: 7z a SanMan_Development_Deploy.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development_Deploy\*
   after_build:
   - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip -DeploymentName SanMan_Development_Deploy
-  artifacts: 
-  - path: deploy\*.zip
+  artifacts:
     name: SanMan_Development_Deploy
   deploy:
   - provider: Environment
