@@ -13,12 +13,12 @@
   before_build:
   - nuget restore SanMan_Development.sln
   before_package:
-  - cmd: 7z a SanMan_Development_Deploy.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development_Deploy\*
+  - cmd: 7z a SanMan_Development.zip %APPVEYOR_BUILD_FOLDER%\SanMan_Development\*
   after_build:
-  - cmd: appveyor PushArtifact SanMan_Development_Deploy.zip -DeploymentName SanMan_Development_Deploy
+  - cmd: appveyor PushArtifact SanMan_Development.zip -DeploymentName SanMan_Development
   artifacts:
-  - path: SanMan_Development_Deploy.zip
-    name: SanMan_Development_Deploy
+  - path: SanMan_Development.zip
+    name: SanMan_Development
     type: zip
   deploy:
   - provider: Environment
@@ -29,7 +29,7 @@
     username: CONPAK-TESTWEB1\Administrator
     password:
       secure: SSmx4kANL0vwt/0p5t1wTn9y7rPedcZpDibrVcLm0B8=
-    artifact: SanMan_Development_Deploy
+    artifact: SanMan_Development
     SanMan_Development_Deploy.deploy_website: true
     ntlm: true
     app_offline: true
