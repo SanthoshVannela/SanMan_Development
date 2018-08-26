@@ -23,7 +23,7 @@
   environment: 
   api_token:
     secure: wjmo8rj0rm84ip3a9oyb
-  deploy_project: SanMan_Development
+  - deploy_project: SanMan_Development
   deploy_artifact: 'SanMan_Development_Deploy'    
   
 before_deploy:
@@ -32,7 +32,7 @@ before_deploy:
   deploy:
   - provider: Environment
     name: SanMan_Development_Environment
-    server: 67.51.178.59
+    server: 67.51.178.59 
     protocol : http
     site_name: SanMan_Development
     username: CONPAK-TESTWEB1\Administrator
