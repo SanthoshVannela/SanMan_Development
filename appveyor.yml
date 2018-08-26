@@ -4,7 +4,7 @@
     only:
     - master
   configuration:
-    - Debug
+    - Release
   build:
     project: SanMan_Development.sln
     publish_wap: true
