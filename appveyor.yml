@@ -21,9 +21,9 @@
     name: SanMan_Development_Deploy
     type: zip
   environment: 
-  api_token:
+  - api_token:
     secure: wjmo8rj0rm84ip3a9oyb
-  - deploy_project: SanMan_Development
+  deploy_project: SanMan_Development
   deploy_artifact: 'SanMan_Development_Deploy'    
   
 before_deploy:
